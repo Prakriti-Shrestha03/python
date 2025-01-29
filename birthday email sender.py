@@ -11,10 +11,6 @@ file_path="BirthdayTracker.xlsx"
 workbook=openpyxl.load_workbook(file_path)
 sheet=workbook.active
 
-# for row in sheet.iter_rows(min_row=2,values_only=True):
-#     x=row[1]
-#     x=x.month
-#     print(x)
 name=[]
 email=[]
 for row in sheet.iter_rows(min_row=2,values_only=True):

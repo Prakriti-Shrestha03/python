@@ -28,9 +28,10 @@ def send_remainder():
     with open(csv_file,mode="r")as file:
         reader=csv.DictReader(file)
         for row in reader:
-            if row["Due Date"].month==1:
-                task.append(row["Task"])
-                email.append(row["Email"])
+            print(type(row["Due Date"]))
+            # if row["Due Date"].month==1:
+            #     task.append(row["Task"])
+            #     email.append(row["Email"])
 
     print(task,email)
 
