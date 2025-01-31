@@ -17,7 +17,7 @@ def create_csv():
 
 
 def add_task(task,duedate,email):
-    with open(csv_file,mode="a")as file:
+    with open(csv_file,mode="a",newline="")as file:
         writer=csv.writer(file)
         writer.writerow([task,duedate,email])
     print("Task Added")
@@ -28,7 +28,7 @@ def send_remainder():
     with open(csv_file,mode="r")as file:
         reader=csv.DictReader(file)
         for row in reader:
-            print(type(row["Due Date"]))
+            
             # if row["Due Date"].month==1:
             #     task.append(row["Task"])
             #     email.append(row["Email"])
